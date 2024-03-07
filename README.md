@@ -10,7 +10,6 @@ Step 1: Extracting Data from a Cryptocurrency API
 ________________________
 url = 'https://api.coincap.io/v2/assets'
 header = {"Content-Type": "application/json", "Accept-Encoding": "deflate"}
-
 response = requests.get(url, headers=header)
 ________________________
 
@@ -33,7 +32,6 @@ Step 3: Transforming Data with Pandas
 
 ________________________
 df = pandas.json_normalize(responseData, 'data')
-
 ________________________
 
 The pandas library is employed to transform the nested JSON data into a structured DataFrame.
@@ -45,7 +43,6 @@ Step 4: Creating a SQLite Connection and Loading Data
 ________________________
 connection = sqlite3.connect('mydata.db')
 df.to_sql(name='MyCryptoData', con=connection, index=False, if_exists='fail')
-
 ________________________
 
 A connection to a SQLite database (mydata.db) is established using sqlite3.connect().
