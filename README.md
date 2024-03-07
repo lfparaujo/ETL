@@ -1,11 +1,11 @@
 # ETL
 
 
-Python Extract Transform Load Example Explanation
+<span style="font-size: larger;"> Python Extract Transform Load Example Explanation </span>
 
 This Python script is an example of an Extract, Transform, Load (ETL) process using data from a cryptocurrency API. The ETL process involves extracting data from an API, transforming it into a suitable format, and loading it into a SQLite database.
 
-Step 1: Extracting Data from a Cryptocurrency API
+<span style="font-size: larger;">Step 1: Extracting Data from a Cryptocurrency API </span>
 
 ________________________
 url = 'https://api.coincap.io/v2/assets' 
@@ -19,7 +19,7 @@ The script uses the requests library to send an HTTP GET request to the specifie
 The header variable contains information about the request, specifying the content type and encoding.
 
 
-Step 2: Handling the API Response
+<span style="font-size: larger;">Step 2: Handling the API Response </span>
 
 ________________________
 responseData = response.json()
@@ -30,7 +30,7 @@ The API response is in JSON format, and response.json() is used to convert it in
 The resulting data is stored in the responseData variable.
 
 
-Step 3: Transforming Data with Pandas
+<span style="font-size: larger;"> Step 3: Transforming Data with Pandas </span>
 
 ________________________
 df = pandas.json_normalize(responseData, 'data')
@@ -40,7 +40,7 @@ The pandas library is employed to transform the nested JSON data into a structur
 The json_normalize function is applied to flatten the nested structure of the 'data' field in the JSON, creating a DataFrame (df).
 
 
-Step 4: Creating a SQLite Connection and Loading Data
+<span style="font-size: larger;"> Step 4: Creating a SQLite Connection and Loading Data </span>
 
 ________________________
 connection = sqlite3.connect('mydata.db')
