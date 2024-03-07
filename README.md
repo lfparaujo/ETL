@@ -8,8 +8,8 @@ This Python script is an example of an Extract, Transform, Load (ETL) process us
 Step 1: Extracting Data from a Cryptocurrency API
 
 ________________________
-url = 'https://api.coincap.io/v2/assets'
-header = {"Content-Type": "application/json", "Accept-Encoding": "deflate"}
+url = 'https://api.coincap.io/v2/assets' /n
+header = {"Content-Type": "application/json", "Accept-Encoding": "deflate"} /n
 response = requests.get(url, headers=header)
 ________________________
 
